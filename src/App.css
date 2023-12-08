@@ -1,12 +1,19 @@
 .header {
   font-size: 25px;
+  border:solid;
+  border-color: aqua;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
-
+  font-size: 10px;
+  justify-content: center;
+  display: flex;
+  border:solid;
+  border-color: black;
 }
 
 .not-found {
-
-  
+font-size: 10rem;
 }
