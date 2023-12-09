@@ -17,3 +17,14 @@
 .not-found {
 font-size: 10rem;
 }
+
+.card-container {
+  border: solid;
+  border-color: black;
+}
+
+.picture {
+  border: solid;
+  border-color: red;
+  background-image: url("/src/images/Jazz.jpg");
+}

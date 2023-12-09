@@ -4,7 +4,7 @@ const pets = [
     name: "Jazz",
     age: 3,
     enjoys: "Sleeping and messing with her younger brother",
-    image: "https://pixabay.com/photos/cat-russian-blue-gray-cat-2761187/",
+    image: "/src/images/Jazz.jpg",
   },
   {
     id: 2,
@@ -29,6 +29,6 @@ const pets = [
     enjoys: "Going on walks at the beach",
     image: "https://pixabay.com/photos/dog-labrador-swim-water-summer-1196417/",
   },
-];
+]
 
-export default pets;
+export default pets
