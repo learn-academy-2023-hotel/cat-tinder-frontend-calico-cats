@@ -4,7 +4,7 @@ const pets = [
     name: "Jazz",
     age: 3,
     enjoys: "Sleeping and messing with her younger brother",
-    image: "/src/images/Jazz.jpg",
+    image: "/images/jazz.jpg",
   },
   {
     id: 2,
@@ -12,7 +12,7 @@ const pets = [
     age: 3,
     enjoys: "Barking at the mailman",
     image:
-      "https://pixabay.com/photos/shepherd-dog-german-shepherd-dog-4074699/",
+      "/src/images/moose.jpg",
   },
   {
     id: 3,
@@ -20,14 +20,14 @@ const pets = [
     age: 6,
     enjoys: "Stealing food from peoples plates",
     image:
-      "https://pixabay.com/photos/rhodesian-ridgeback-dog-guard-dog-2727035/",
+      "/src/images/ruka.jpg",
   },
   {
     id: 4,
     name: "Max",
     age: 5,
     enjoys: "Going on walks at the beach",
-    image: "https://pixabay.com/photos/dog-labrador-swim-water-summer-1196417/",
+    image: "/src/images/max.jpg",
   },
 ]
 

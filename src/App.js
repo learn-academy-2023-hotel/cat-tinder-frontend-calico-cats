@@ -14,7 +14,6 @@ import NotFound from "./pages/NotFound"
 const App = () => {
   const [pets, setPets] = useState(mockPets)
 
-  console.log(pets)
 
   return (
     <>

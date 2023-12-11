@@ -17,14 +17,24 @@
 .not-found {
 font-size: 10rem;
 }
+.cards-container{
+  display: flex;
+  justify-content: space-around;
+  border:solid;
+  border-color: blueviolet;
+}
 
-.card-container {
+/* .card-container {
   border: solid;
   border-color: black;
-}
+} */
 
-.picture {
+/* .picture {
   border: solid;
   border-color: red;
-  background-image: url("/src/images/Jazz.jpg");
-}
+  height: 30vh;
+  width: 20vh;
+  background-image: url('/src/images/Jazz.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+} */
