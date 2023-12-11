@@ -18,21 +18,59 @@
 font-size: 10rem;
 }
 .cards-container{
+  
   display: flex;
   justify-content: space-around;
-  border:solid;
-  border-color: blueviolet;
 }
 .card {
+  border-color: black;
+  border-style:ridge;
+  width:40vh;
+  height: 60vh;
   margin: 2rem 0;
 }
+.picture{
+  height: 4 0vh;
+  width:40vh;
+}
+.all-pictures{
+  height: 40vh;
+  width: 40vh;
+}
+.pet-name{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 10vh;
+  display: flex;
+  justify-content: center;
 
+  height: 20vh;
+  width: 20vh;
+}
+.pet-age{
+  margin-left: 10vh;
+  display: flex;
+  justify-content:center ;
+  
+  width: 20vh;
+  height: 20vh;
+}
+.button{
+  width: 10vh;
+  border-radius: 5px;
+  margin-left: 15vh;
+  background-color: white;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
 .cards-index {
   display: flex;
   justify-content: space-between;
 }
+.card{
+ 
+}
 
 .nav-link {
   border: solid black ;
-  
 }

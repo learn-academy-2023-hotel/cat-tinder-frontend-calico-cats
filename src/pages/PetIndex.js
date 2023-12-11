@@ -1,30 +1,29 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
-import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
-import mockPets from "../mockPets"
+import { Link } from "react-router-dom"
+
+
+
 
 const PetIndex = ({ pets }) => {
   return (
     <div className="cards-index">
       {pets?.map((pet, index) => {
         return (
-          <Card
-            style={{
-              width: "14rem",
-            }}
-            key={index}
-          >
-            <img alt={`profile of a cat named ${pet.name}`} src={pet.image} />
-            <CardBody>
-              <CardTitle tag="h5">{pet.name}</CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Age: {pet.age}
-              </CardSubtitle>
-              <NavLink to={`/petshow/${pet.id}`} className="nav-link">
-                View Profile
-              </NavLink>
-            </CardBody>
-          </Card>
+          <div className="card">
+            <div className="picture">
+              <img className="all-pictures" alt={`Profile picture of a pet named ${pet.name}`} src={pet.image} />
+            </div>
+            <div className="pet-name">   
+            {pet.name}           
+            </div>
+            <div className="pet-age">
+              Age: {pet.age}
+            </div>
+            <Link to={`/petshow/${pet.id}`}>
+            <button className="button">Details</button>
+            </Link>
+          </div>
+        
         )
       })}
     </div>
