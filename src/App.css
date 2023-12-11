@@ -23,18 +23,16 @@ font-size: 10rem;
   border:solid;
   border-color: blueviolet;
 }
+.card {
+  margin: 2rem 0;
+}
 
-/* .card-container {
-  border: solid;
-  border-color: black;
-} */
+.cards-index {
+  display: flex;
+  justify-content: space-between;
+}
 
-/* .picture {
-  border: solid;
-  border-color: red;
-  height: 30vh;
-  width: 20vh;
-  background-image: url('/src/images/Jazz.jpg');
-  background-repeat:no-repeat;
-  background-size: cover;
-} */
+.nav-link {
+  border: solid black ;
+  
+}
