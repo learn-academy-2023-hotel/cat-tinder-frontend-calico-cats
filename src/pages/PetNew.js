@@ -27,6 +27,7 @@ const PetNew = ({createPet}) => {
 
   return (
     <>
+    
     <Form>
       <FormGroup>
         <Label for='name'>Name</Label>
@@ -38,11 +39,11 @@ const PetNew = ({createPet}) => {
         <Input type='text' name='age' id='age' onChange={handleChange} value={newPet.age} />
       </FormGroup>
       <FormGroup>
-        <Label for='enjoys'>Enjoys</Label>
+        <Label for='enjoys'>What's something your future soulamte should know about you?</Label>
         <Input type='text' name='enjoys' id='enjoys' onChange={handleChange} value={newPet.enjoys} />
       </FormGroup>
       <FormGroup>
-        <Label for='image'>Image Link</Label>
+        <Label for='image'>Submit a link for your purrfile picture.</Label>
         <Input type='text' name='image' id='image' onChange={handleChange} value={newPet.image} />
       </FormGroup>
       <Button onClick={handleSubmit}>Submit Your Profile</Button>
