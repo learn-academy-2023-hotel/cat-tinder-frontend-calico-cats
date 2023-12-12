@@ -8,7 +8,7 @@ const PetShow = ({ pets }) => {
   console.log(currentPet)
   return (
     <main className="pet-show-cards">
-      <div>PetShow</div>
+      <div className="pet-purrfile">Purrfile of {currentPet.name}</div>
       {currentPet && (
         <>
           <img
@@ -16,7 +16,9 @@ const PetShow = ({ pets }) => {
             src={currentPet.image}
             className="pet-show-img"
           />
-          <h3>{currentPet.enjoys}</h3>
+          <h3 className="pet-bio">
+            {currentPet.name} enjoys: {currentPet.enjoys}
+          </h3>
         </>
       )}
     </main>

@@ -5,6 +5,7 @@ import PetIndex from "../pages/PetIndex"
 
 const Header = () => {
   return (
+    
     <header>
       <Nav justified>
         <NavItem>

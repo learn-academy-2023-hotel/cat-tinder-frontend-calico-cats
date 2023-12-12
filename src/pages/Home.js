@@ -10,7 +10,7 @@ import {
 } from "reactstrap"
 
 const Home = () => {
-  return <div></div>
+  return <div className="home-page"></div>
 }
 
 export default Home

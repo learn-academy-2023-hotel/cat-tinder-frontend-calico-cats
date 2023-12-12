@@ -6,13 +6,34 @@
   justify-content: center;
 }
 
-.footer {
-  font-size: 10px;
+body {
+  background-color: black;
   justify-content: center;
-  display: flex;
-  border:solid;
-  border-color: black;
+  align-items: center;
+  margin: auto;
 }
+
+.show-background {
+  background-color: black;
+}
+ /* .home-page{
+  width: 500vh;
+  height: 400vh;
+  background-image: url('/src/logo.png');
+  background-repeat: no-repeat; */
+
+  
+
+/* } */
+.footer {
+  font-size: 16px;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  
+}
+
 
 .not-found {
 font-size: 10rem;
@@ -73,4 +94,29 @@ font-size: 10rem;
 
 .nav-link {
   border: solid black ;
+}
+.pet-show-img {
+  height: 70vh;
+  width: 70vh;
+  justify-content: center;
+  align-items: center;
+  margin-left: 420px;
+  margin-top: 40px;
+}
+.pet-bio {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.pet-purrfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  font-size: 25px;
+}
+
+.github-icon {
+  margin-left: 5px;
+  margin-right: 5px;
 }

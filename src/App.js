@@ -14,20 +14,21 @@ import NotFound from "./pages/NotFound"
 const App = () => {
   const [pets, setPets] = useState(mockPets)
 
-
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/petindex" element={<PetIndex pets={pets} />} />
-        <Route path="/petshow/:id" element={<PetShow pets={pets}/>} />
-        <Route path="/petnew" element={<PetNew />} />
-        <Route path="/petedit" element={<PetEdit />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/petindex" element={<PetIndex pets={pets} />} />
+          <Route path="/petshow/:id" element={<PetShow pets={pets} />} />
+          <Route path="/petnew" element={<PetNew />} />
+          <Route path="/petedit" element={<PetEdit />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }
