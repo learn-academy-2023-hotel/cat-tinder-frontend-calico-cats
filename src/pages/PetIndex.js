@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const PetIndex = ({ pets }) => {
   return (
-    <div className="show-background">
+<div className="pet-index-main-container">
       <div className="cards-index">
         {pets?.map((pet, index) => {
           return (
@@ -24,7 +24,7 @@ const PetIndex = ({ pets }) => {
           )
         })}
       </div>
-    </div>
+</div>
   )
 }
 

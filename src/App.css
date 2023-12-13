@@ -1,62 +1,45 @@
-.header {
-  font-size: 25px;
-  border:solid;
-  border-color: aqua;
-  display: flex;
-  justify-content: center;
-}
-
 body {
-  background-color: black;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  background-image: radial-gradient(circle, rgb(234, 25, 164), rgb(255, 132, 0), rgb(87, 0, 128));
+  background-repeat: no-repeat;
 }
-
-.show-background {
-  background-color: black;
-}
- /* .home-page{
-  width: 500vh;
-  height: 400vh;
-  background-image: url('/src/logo.png');
-  background-repeat: no-repeat; */
-
-  
-
-/* } */
 .footer {
   font-size: 16px;
   justify-content: center;
   position: fixed;
   bottom: 0;
   display: flex;
+  margin-left: 490px;
   
 }
-
-
 .not-found {
 font-size: 10rem;
 }
 .cards-container{
-  
   display: flex;
   justify-content: space-around;
+  
+  
 }
 .card {
   border-color: black;
   border-style:ridge;
-  width:40vh;
+  width:100vh;
   height: 60vh;
   margin: 2rem 0;
+  color: rgb(255, 255, 255);
+  background-color: rgba(137, 43, 226, 0.241);
+  /* /* margin-right: 30px; */
+  margin-left: 40px; 
+  justify-content: space-between;
+  
 }
 .picture{
-  height: 4 0vh;
+  height: 40vh;
   width:40vh;
 }
 .all-pictures{
   height: 40vh;
-  width: 40vh;
+  width: 35vh;
 }
 .pet-name{
   margin-top: 2vh;
@@ -64,7 +47,6 @@ font-size: 10rem;
   margin-left: 10vh;
   display: flex;
   justify-content: center;
-
   height: 20vh;
   width: 20vh;
 }
@@ -72,7 +54,6 @@ font-size: 10rem;
   margin-left: 10vh;
   display: flex;
   justify-content:center ;
-  
   width: 20vh;
   height: 20vh;
 }
@@ -85,15 +66,12 @@ font-size: 10rem;
   margin-bottom: 2vh;
 }
 .cards-index {
+  width: 80rem;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-}
-.card{
+  justify-content:space-evenly;
  
-}
-
-.nav-link {
-  border: solid black ;
+  
 }
 .pet-show-img {
   height: 70vh;
@@ -102,6 +80,7 @@ font-size: 10rem;
   align-items: center;
   margin-left: 420px;
   margin-top: 40px;
+  color: brown;
 }
 .pet-bio {
   align-items: center;
@@ -115,8 +94,87 @@ font-size: 10rem;
   margin-top: 35px;
   font-size: 25px;
 }
-
 .github-icon {
   margin-left: 5px;
   margin-right: 5px;
 }
+.logo {
+  background-size: 50vh;
+  margin-top: 8vh;
+  margin-left: 54vh;
+  background-repeat: no-repeat;
+  background-image: url(/src/images/Logo.png) ;
+  width: 52vh;
+  height: 53vh;
+}
+.home-container{
+  margin-left: 0%;
+  width:165vh;
+  height: 100vh;
+  border:solid;
+  border-color: blueviolet;
+}
+.title{
+  align-items: center;
+  justify-content: center;
+  border: solid red;
+  z-index:auto;
+
+}
+h1{
+  margin-left: 475px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 80px;
+}
+.pet-index-main-container{
+  border: solid;
+  border-color: black;
+  width:85rem;
+  height:100vh;
+}
+
+.home-links {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  color: rgb(116, 57, 233);
+  font-weight: 3px;
+  box-shadow: purple;
+  
+}
+.home-links:hover {
+  background-color: rgb(246, 145, 21);
+}
+
+.header-div {
+  
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  
+}
+.form-div {
+    border: solid;
+    border-color: black;
+    width:85rem;
+    height:100vh;
+  }
+
+  .forms-input {
+    font-size: 24px;
+    color: rgb(252, 252, 252);
+    align-content: center;
+   justify-content: center;
+    margin-left: 400px;
+    margin-top: 130px;
+  }
+  .input-box {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+

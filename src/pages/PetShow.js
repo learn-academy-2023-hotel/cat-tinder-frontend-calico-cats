@@ -1,13 +1,17 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
 import mockPets from "../mockPets"
 
 const PetShow = ({ pets }) => {
   const { id } = useParams()
   let currentPet = pets?.find((pet) => pet.id === +id)
-  console.log(currentPet)
+  // console.log(currentPet)
   return (
     <main className="pet-show-cards">
+      <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
+        <button className="button">Update Purrfile</button>
+      </NavLink>
+
       <div className="pet-purrfile">Purrfile of {currentPet.name}</div>
       {currentPet && (
         <>

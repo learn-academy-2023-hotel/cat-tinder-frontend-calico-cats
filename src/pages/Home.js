@@ -1,16 +1,14 @@
 import React, { useState } from "react"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from "reactstrap"
 
 const Home = () => {
-  return <div className="home-page"></div>
+  return (
+    <div className="home-container">
+      {/* <div classname="title"> */}
+      <h1 classname="title">Pet Tinder</h1>
+      {/* </div> */}
+      <div className="logo"></div>
+    </div>
+  )
 }
 
 export default Home
