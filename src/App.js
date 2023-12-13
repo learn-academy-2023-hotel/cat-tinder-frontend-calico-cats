@@ -52,7 +52,6 @@ const App = () => {
       .catch((error) => console.log("Pet create errors:", error))
   }
   const deletedPet = (id) => {
-    console.log("******", id)
     fetch(`http://localhost:3000/pets/${id}`, {
       headers: {
         "Content-Type": "application/json",

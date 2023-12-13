@@ -5,7 +5,7 @@ import { Button } from "reactstrap"
 const PetShow = ({ pets, deletedPet }) => {
   const { id } = useParams()
   let currentPet = pets?.find((pet) => pet.id === +id)
-  // console.log(currentPet)
+
   return (
     <div className="pet-show-cards">
       <div className="pet-purrfile">
@@ -39,30 +39,6 @@ const PetShow = ({ pets, deletedPet }) => {
         </>
       )}
     </div>
-
-    // <div className="pet-show-cards">
-    //     <div className="pet-purrfile">Purrfile of {currentPet.name}</div>
-    //     {currentPet && (
-
-    //   <div className="show-big-container">
-
-    //         <div className="show-picture">
-    //           <img
-    //             alt={`profile of a pet named ${currentPet.name}`}
-    //             src={currentPet.image}
-    //             className="pet-show-img"
-    //           />
-    //           <h3 className="pet-bio">
-    //             {currentPet.name} enjoys: {currentPet.enjoys}
-    //           </h3>
-    //         </div>
-    //     )}
-    //   </div>
-    //   <div className="show-button-container">
-    //     <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
-    //       <button className="button">Update Purrfile</button>
-    //     </NavLink>
-    //   </div>
   )
 }
 
