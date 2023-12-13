@@ -9,6 +9,7 @@ import PetNew from "./pages/PetNew"
 import PetShow from "./pages/PetShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import ChatBox from "./components/ChatBox"
 
 const App = () => {
   const [pets, setPets] = useState([])
