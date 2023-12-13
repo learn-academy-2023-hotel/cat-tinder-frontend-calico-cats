@@ -8,6 +8,7 @@ body {
   position: fixed;
   bottom: 0;
   display: flex;
+  margin-left: 490px;
   
 }
 .not-found {
@@ -16,21 +17,29 @@ font-size: 10rem;
 .cards-container{
   display: flex;
   justify-content: space-around;
+  
+  
 }
 .card {
   border-color: black;
   border-style:ridge;
-  width:40vh;
+  width:100vh;
   height: 60vh;
   margin: 2rem 0;
+  color: rgb(255, 255, 255);
+  background-color: rgba(137, 43, 226, 0.241);
+  /* /* margin-right: 30px; */
+  margin-left: 40px; 
+  justify-content: space-between;
+  
 }
 .picture{
-  height: 4 0vh;
+  height: 40vh;
   width:40vh;
 }
 .all-pictures{
   height: 40vh;
-  width: 40vh;
+  width: 35vh;
 }
 .pet-name{
   margin-top: 2vh;
@@ -61,6 +70,8 @@ font-size: 10rem;
   height: 100vh;
   display: flex;
   justify-content:space-evenly;
+ 
+  
 }
 .pet-show-img {
   height: 70vh;
@@ -69,6 +80,7 @@ font-size: 10rem;
   align-items: center;
   margin-left: 420px;
   margin-top: 40px;
+  color: brown;
 }
 .pet-bio {
   align-items: center;
@@ -88,7 +100,7 @@ font-size: 10rem;
 }
 .logo {
   background-size: 50vh;
-  margin-top: 18vh;
+  margin-top: 8vh;
   margin-left: 54vh;
   background-repeat: no-repeat;
   background-image: url(/src/images/Logo.png) ;
@@ -103,7 +115,18 @@ font-size: 10rem;
   border-color: blueviolet;
 }
 .title{
-  margin-left: 30vh;
+  align-items: center;
+  justify-content: center;
+  border: solid red;
+  z-index:auto;
+
+}
+h1{
+  margin-left: 475px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 80px;
 }
 .pet-index-main-container{
   border: solid;
@@ -111,3 +134,47 @@ font-size: 10rem;
   width:85rem;
   height:100vh;
 }
+
+.home-links {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  color: rgb(116, 57, 233);
+  font-weight: 3px;
+  box-shadow: purple;
+  
+}
+.home-links:hover {
+  background-color: rgb(246, 145, 21);
+}
+
+.header-div {
+  
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  
+}
+.form-div {
+    border: solid;
+    border-color: black;
+    width:85rem;
+    height:100vh;
+  }
+
+  .forms-input {
+    font-size: 24px;
+    color: rgb(252, 252, 252);
+    align-content: center;
+   justify-content: center;
+    margin-left: 400px;
+    margin-top: 130px;
+  }
+  .input-box {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+

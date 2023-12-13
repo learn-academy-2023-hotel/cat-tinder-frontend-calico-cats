@@ -1,15 +1,13 @@
 import React, { useState } from "react"
 
-
 const Home = () => {
-  return(
-  <div className="home-container">
-    <div classname='title'>
-      <h1>Pet Tinder</h1>
+  return (
+    <div className="home-container">
+      {/* <div classname="title"> */}
+      <h1 classname="title">Pet Tinder</h1>
+      {/* </div> */}
+      <div className="logo"></div>
     </div>
-    <div className="logo">
-    </div>
-  </div>
   )
 }
 
