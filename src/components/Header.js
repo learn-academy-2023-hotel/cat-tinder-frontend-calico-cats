@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <header>
       <div className="header-div">
-        <Link to={`/`}>
+        <Link to={`/`} style={{textDecoration: 'none'}}>
           <button className="home-links">Home</button>
         </Link>
-        <Link to={`/petindex`}>
+        <Link to={`/petindex`} style={{textDecoration: 'none'}}>
           <button className="home-links">See the Pets</button>
         </Link>
-        <Link to={`/petnew`}>
+        <Link to={`/petnew`} style={{textDecoration: 'none'}}>
           <button className="home-links">Create a Purrfile</button>
         </Link>
       </div>

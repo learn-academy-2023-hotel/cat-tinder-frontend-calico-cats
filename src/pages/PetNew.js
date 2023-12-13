@@ -13,7 +13,6 @@ const PetNew = ({ createPet }) => {
 
   const handleChange = (e) => {
     setNewPet({ ...newPet, [e.target.name]: e.target.value })
-    // console.log(newPet)
   }
 
   const handleSubmit = () => {
