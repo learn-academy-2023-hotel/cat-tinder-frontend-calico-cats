@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import "./App.css"
-import mockPets from "./mockPets"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import PetEdit from "./pages/PetEdit"
@@ -12,13 +11,57 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 
 const App = () => {
-  const [pets, setPets] = useState(mockPets)
-  const createPet = (createdPet) => {
-    console.log("Created Pet:", createdPet)
+  const [pets, setPets] = useState([])
+
+  useEffect(() => {
+    readPets()
+  }, [])
+
+  const readPets = () => {
+    fetch("http://localhost:3000/pets") // this is the request
+      .then((response) => response.json()) // converts JSON to data we can use in JavaScript
+      .then((payload) => {
+        setPets(payload)
+      })
+      .catch((error) => console.log("Cat read errors: ", error))
   }
-  const updatePet = (pet, id) => {
-    console.log("pet:", pet)
-    console.log("id:", id)
+
+  const createPet = (createdPet) => {
+    fetch("http://localhost:3000/pets", {
+      body: JSON.stringify(createdPet),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then(() => readPets())
+      .catch((error) => console.log("Pet create errors:", error))
+  }
+
+  const updatePet = (currentPet, id) => {
+    fetch(`http://localhost:3000/pets/${id}`, {
+      body: JSON.stringify(currentPet),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then(() => readPets())
+      .catch((error) => console.log("Pet create errors:", error))
+  }
+  const deletedPet = (id) => {
+    console.log("******", id)
+    fetch(`http://localhost:3000/pets/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then(() => readPets())
+      .catch((errors) => console.log("delete errors:", errors))
   }
 
   return (
@@ -28,7 +71,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/petindex" element={<PetIndex pets={pets} />} />
-          <Route path="/petshow/:id" element={<PetShow pets={pets} />} />
+          <Route
+            path="/petshow/:id"
+            element={<PetShow pets={pets} deletedPet={deletedPet} />}
+          />
           <Route path="/petnew" element={<PetNew createPet={createPet} />} />
           <Route
             path="/petedit/:id"
