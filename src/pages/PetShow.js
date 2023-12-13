@@ -1,32 +1,60 @@
-import React from "react"
-import { useParams, NavLink } from "react-router-dom"
-import mockPets from "../mockPets"
+import React from "react";
+import { useParams, NavLink } from "react-router-dom";
+import mockPets from "../mockPets";
 
 const PetShow = ({ pets }) => {
-  const { id } = useParams()
-  let currentPet = pets?.find((pet) => pet.id === +id)
+  const { id } = useParams();
+  let currentPet = pets?.find((pet) => pet.id === +id);
   // console.log(currentPet)
   return (
-    <main className="pet-show-cards">
-      <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
-        <button className="button">Update Purrfile</button>
-      </NavLink>
+    <div className="pet-show-cards">
 
-      <div className="pet-purrfile">Purrfile of {currentPet.name}</div>
+      <div className="pet-purrfile"><h2>Purrfile of {currentPet.name}</h2></div>
       {currentPet && (
         <>
-          <img
-            alt={`profile of a pet named ${currentPet.name}`}
-            src={currentPet.image}
-            className="pet-show-img"
-          />
-          <h3 className="pet-bio">
-            {currentPet.name} enjoys: {currentPet.enjoys}
-          </h3>
+          <div className="show-big-container">
+          <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
+        <button className="button-show">Update Purrfile</button>
+      </NavLink>
+            <div className="show-picture">
+              <img
+                alt={`profile of a pet named ${currentPet.name}`}
+                src={currentPet.image}
+                className="pet-show-img"
+              />
+              <h3 className="pet-bio">
+                {currentPet.name} enjoys: {currentPet.enjoys}
+              </h3>
+            </div>
+          </div>
         </>
       )}
-    </main>
-  )
-}
+    </div>
 
-export default PetShow
+    // <div className="pet-show-cards">
+    //     <div className="pet-purrfile">Purrfile of {currentPet.name}</div>
+    //     {currentPet && (
+
+    //   <div className="show-big-container">
+
+    //         <div className="show-picture">
+    //           <img
+    //             alt={`profile of a pet named ${currentPet.name}`}
+    //             src={currentPet.image}
+    //             className="pet-show-img"
+    //           />
+    //           <h3 className="pet-bio">
+    //             {currentPet.name} enjoys: {currentPet.enjoys}
+    //           </h3>
+    //         </div>
+    //     )}
+    //   </div>
+    //   <div className="show-button-container">
+    //     <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
+    //       <button className="button">Update Purrfile</button>
+    //     </NavLink>
+    //   </div>
+  );
+};
+
+export default PetShow;

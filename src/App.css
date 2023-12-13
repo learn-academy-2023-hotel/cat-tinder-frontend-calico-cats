@@ -17,8 +17,6 @@ font-size: 10rem;
 .cards-container{
   display: flex;
   justify-content: space-around;
-  
-  
 }
 .card {
   border-color: black;
@@ -28,7 +26,6 @@ font-size: 10rem;
   margin: 2rem 0;
   color: rgb(255, 255, 255);
   background-color: rgba(137, 43, 226, 0.241);
-  /* /* margin-right: 30px; */
   margin-left: 40px; 
   justify-content: space-between;
   
@@ -57,41 +54,73 @@ font-size: 10rem;
   width: 20vh;
   height: 20vh;
 }
+.button-show{
+  margin-top: 50vh;
+  color: purple;
+  width: 10vh;
+  border-radius: 5px;
+  background-color: white;
+}
 .button{
   width: 10vh;
   border-radius: 5px;
   margin-left: 15vh;
-  background-color: white;
   margin-top: 5vh;
   margin-bottom: 2vh;
+  background-color: white;
+}
+.button-show:hover{
+  background-color: rgb(246, 145, 21);
+}
+.show-button-container{
+  border: solid;
+  border-color: brown;
+  width: 15vh;
+  height: 15vh;
+}
+.show-picture{
+  width:50vh;
+  height:50vh;
+  margin-left: 47vh;
+  margin-top: 14vh;
+}
+.pet-show-cards{
+  height: 90vh;
 }
 .cards-index {
   width: 80rem;
   height: 100vh;
   display: flex;
   justify-content:space-evenly;
- 
-  
 }
 .pet-show-img {
-  height: 70vh;
-  width: 70vh;
+  border-color: black;
+  border:solid;
+  border-radius: 50%;
+  height: 40vh;
+  width: 40vh;
   justify-content: center;
   align-items: center;
-  margin-left: 420px;
-  margin-top: 40px;
   color: brown;
 }
+.show-big-container{
+  display: flex;
+  justify-content: row;
+}
 .pet-bio {
+  margin-top: 5vh;
+  color:white;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 .pet-purrfile {
+  color:white;
+  font-size:60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 50px;
   font-size: 25px;
 }
 .github-icon {
@@ -177,4 +206,3 @@ h1{
     display: flex;
     align-items: center;
   }
-
