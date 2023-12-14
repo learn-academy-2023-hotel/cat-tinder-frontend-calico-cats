@@ -69,7 +69,7 @@ const PetNew = ({ createPet }) => {
               value={newPet.image}
             />
           </FormGroup>
-          <Button onClick={handleSubmit}>Submit Your Profile</Button>
+          <Button className="form-button" onClick={handleSubmit}>Submit Your Profile</Button>
         </Form>
       </main>
     </>
