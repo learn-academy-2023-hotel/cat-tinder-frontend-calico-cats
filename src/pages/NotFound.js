@@ -4,6 +4,11 @@ import "../App.css"
 import Dino from "../components/Dino"
 
 
+
+
+
+
+
 const NotFound = () => {
   return (
     <>
