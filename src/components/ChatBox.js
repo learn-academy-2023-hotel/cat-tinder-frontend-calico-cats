@@ -19,14 +19,14 @@ const ChatBox = () => {
     <div className="chat-box">
       <div style={{ maxHeight: "200px", overflowY: "scroll" }}>
         {messages.map((message, index) => (
-          <div key={index}>{message}</div>
+          <div className="text-history" key={index}>{message}</div>
         ))}
       </div>
       <input
         type="text"
         value={newMessage}
         onChange={handleMessageChange}
-        placeholder="Type your message..."
+        placeholder="Send them  a message"
       />
       <button onClick={handleSendMessage}>Send</button>
     </div>
