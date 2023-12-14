@@ -20,15 +20,11 @@ const PetShow = ({ pets, deletedPet }) => {
                 src={currentPet.image}
                 className="pet-show-img"
               />
-              <h3 className="pet-bio">
-                {currentPet.name} enjoys: {currentPet.enjoys}
-              </h3>
-              <div className="chat-box">
-                <ChatBox />
-              </div>
             </div>
           </div>
-          <div className="show-buttonsbox">
+        <div className="show-bottom-box">
+          
+          <div className="show-buttons-box">
           <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
             <button className="button-show">Update Purrfile</button>
           </NavLink>
@@ -41,6 +37,13 @@ const PetShow = ({ pets, deletedPet }) => {
             </button>
           </NavLink>
           </div>
+          <p className="pet-bio">
+                {currentPet.name} enjoys: {currentPet.enjoys}
+              </p>
+              <div className="chat-box">
+                <ChatBox />
+              </div>
+              </div> 
         </>
       )}
     </div>
