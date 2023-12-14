@@ -29,7 +29,7 @@ font-family: 'Brush Script MT', cursive;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-font-size: 150px;
+font-size: 80px;
 animation: flicker 1.5s infinite alternate;
 color: #ffffff;
 text-shadow:
@@ -406,4 +406,69 @@ h1 {
 }
 .chat-box{
   margin-left: 7vh;
+}
+
+/* Dino game CSS */
+
+.game {
+  background-color: white;
+  width: 600px;
+  height: 225px;
+  border: 1px solid black;
+  margin: auto;
+}
+#dino {
+  margin-top: -6vh;
+  width: 50px;
+  height: 50px;
+  background-image: url(/src/images/dinosaur.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+  top: 150px;
+  }
+
+  30% {
+  top: 130px;
+  }
+  50% {
+  top: 80px;
+  }
+
+  80% {
+  top: 130px;
+  }
+
+  100% {
+  top: 150px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-image: url(/src/images/cactus.png);
+  background-size: 20px 40px;
+  animation: block 2s infinite linear;
+}
+
+@keyframes block {
+  0% {
+  left: 580px;
+  }
+
+  100% {
+  left: -5px;
+  }
 }
