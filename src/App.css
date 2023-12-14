@@ -9,7 +9,6 @@ body {
   display: flex;
   margin-left: 490px;
   color: white;
-  
 }
 .not-found {
 margin-left: 455px;
@@ -209,26 +208,30 @@ text-shadow:
   margin-right: 5px;
 }
 .logo {
-  background-size: 50vh;
-  margin-top: 8vh;
-  margin-left: 54vh;
+  background-size: contain;
   background-repeat: no-repeat;
   background-image: url(/src/images/Logo.png) ;
   width: 52vh;
   height: 53vh;
+
 }
 .home-container{
-  margin-left: 0%;
-  width:165vh;
+  margin-top: -10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:auto;
   height: 100vh;
 }
 .title{
+  
+  width: 50vh;
   align-items: center;
   justify-content: center;
-  
   z-index:auto;
-
 }
+
 h1{
   margin-left: 475px;
   font-family: 'Brush Script MT', cursive;
