@@ -2,13 +2,26 @@ body {
   background-image: radial-gradient(circle, rgb(234, 25, 164), rgb(255, 132, 0), rgb(87, 0, 128));
 }
 .footer {
-  font-size: 16px;
-  justify-content: center;
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
   display: flex;
-  margin-left: 490px;
   color: white;
+
+  background-color: #ffffff00;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; 
+  z-index: 1000; 
+  transition: transform 0.3s ease-in-out;
+}
+.footer :hover{
+  transform: scale(1.1);
+  
+
 }
 .not-found {
 margin-left: 455px;
