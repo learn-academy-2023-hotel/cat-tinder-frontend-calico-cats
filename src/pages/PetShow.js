@@ -28,6 +28,7 @@ const PetShow = ({ pets, deletedPet }) => {
               </div>
             </div>
           </div>
+          <div className="show-buttonsbox">
           <NavLink to={`/petedit/${currentPet.id}`} className="nav-link">
             <button className="button-show">Update Purrfile</button>
           </NavLink>
@@ -39,6 +40,7 @@ const PetShow = ({ pets, deletedPet }) => {
               Delete Purrfile
             </button>
           </NavLink>
+          </div>
         </>
       )}
     </div>
