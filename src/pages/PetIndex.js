@@ -18,7 +18,7 @@ const PetIndex = ({ pets }) => {
               <div className="pet-name">{pet.name}</div>
               <div className="pet-age">Age: {pet.age}</div>
               <Link to={`/petshow/${pet.id}`}>
-                <button className="button">Details</button>
+                <button className="button">Bio</button>
               </Link>
             </div>
           )
