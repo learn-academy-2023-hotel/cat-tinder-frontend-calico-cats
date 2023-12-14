@@ -1,8 +1,17 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const ChatBox = () => {
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(() => {
+    const storedMessages =
+      JSON.parse(localStorage.getItem("chatMessages")) || []
+    return storedMessages
+  })
+
   const [newMessage, setNewMessage] = useState("")
+
+  useEffect(() => {
+    localStorage.setItem("chatMessages", JSON.stringify(messages))
+  }, [messages])
 
   const handleMessageChange = (event) => {
     setNewMessage(event.target.value)
@@ -15,20 +24,29 @@ const ChatBox = () => {
     }
   }
 
+  const handleDeleteMessage = (index) => {
+    const updatedMessages = [...messages]
+    updatedMessages.splice(index, 1)
+    setMessages(updatedMessages)
+  }
+
   return (
     <div className="chat-box">
       <div style={{ maxHeight: "200px", overflowY: "scroll" }}>
         {messages.map((message, index) => (
-          <div className="text-history" key={index}>{message}</div>
+          <div key={index} className="message-container">
+            <div className="text-history">{message}</div>
+            <button onClick={() => handleDeleteMessage(index)}>Delete</button>
+          </div>
         ))}
       </div>
       <input
         type="text"
         value={newMessage}
         onChange={handleMessageChange}
-        placeholder="Send them  a message"
+        placeholder="Post something!"
       />
-      <button onClick={handleSendMessage}>Send</button>
+      <button onClick={handleSendMessage}>Post</button>
     </div>
   )
 }
