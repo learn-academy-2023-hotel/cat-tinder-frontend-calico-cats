@@ -17,9 +17,10 @@ const App = () => {
   useEffect(() => {
     readPets()
   }, [])
+  const url = "https://pet-tinder-backend-0e3b.onrender.com"
 
   const readPets = () => {
-    fetch("http://localhost:3000/pets") // this is the request
+    fetch(`${url}/pets`) // this is the request
       .then((response) => response.json()) // converts JSON to data we can use in JavaScript
       .then((payload) => {
         setPets(payload)
@@ -28,7 +29,7 @@ const App = () => {
   }
 
   const createPet = (createdPet) => {
-    fetch("http://localhost:3000/pets", {
+    fetch(`${url}/pets`, {
       body: JSON.stringify(createdPet),
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +42,7 @@ const App = () => {
   }
 
   const updatePet = (currentPet, id) => {
-    fetch(`http://localhost:3000/pets/${id}`, {
+    fetch(`${url}/pets/${id}`, {
       body: JSON.stringify(currentPet),
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +54,7 @@ const App = () => {
       .catch((error) => console.log("Pet create errors:", error))
   }
   const deletedPet = (id) => {
-    fetch(`http://localhost:3000/pets/${id}`, {
+    fetch(`${url}/pets/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
